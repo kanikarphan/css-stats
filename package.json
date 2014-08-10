@@ -11,6 +11,12 @@
     "type": "git",
     "url": "https://github.com/kanikarphan/css-stats"
   },
+  "bin": {
+    "css-stats": "app.js"
+  },
+  "engine": {
+    "node": ">=0.4.0"
+  },
   "dependencies": {
     "grunt": "^0.4.5",
     "commander": "^2.3.0",
@@ -20,5 +26,13 @@
     "grunt-csscss": "^0.6.2",
     "cmdify": "0.0.4",
     "stylestats": "^4.1.2"
-  }
+  },
+  "readme": "# Stats\n\nStats utilize [Stylestats](https://github.com/t32k/stylestats) and [CSSCSS](https://github.com/zmoazeni/csscss) to parse a css file and gives you stats on it.\n\n## Getting Started\n\nStats needs the following installed: Grunt CLI `~0.4.0` and Ruby (`v1.9.x` and up).\n\nIf you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to Grunt CLI.\n\nTo check Ruby is installed on your machine use `ruby -v`. \n[RubyInstaller](http://rubyinstaller.org/) is a Windows-based installer, the easiest way to get Ruby on Windows.\n\nUsage\n```\nUsage: stats [--stylestats|--csscss] [css]\n\nCommands:\n\nsetup [type]\n   run setup command to install parser\n\nOptions:\n\n-h, --help              output usage information\n-V, --version           output the version number\n-s, --stylestats [css]  parse css for overall stats\n-c, --csscss [css]      parse css for rulesets that have duplicated declarations\n-t, --type [parser]     parser to install [stylestats|csscss]\n```",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/kanikarphan/css-stats/issues"
+  },
+  "homepage": "https://github.com/kanikarphan/css-stats",
+  "_id": "css-stats@0.0.1",
+  "_from": "css-stats@"
 }
