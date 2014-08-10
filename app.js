@@ -14,15 +14,15 @@ var fs = require('fs')
 
 var cssStats = module.exports;
 
+var parsing = [
+  '  Parsing'.cyan,
+  '| Parsing'.cyan,
+  '\\ Parsing'.cyan,
+  '- Parsing'.cyan
+];
+
 cssStats.stylestats = function(css, path) {
   var stats = new StyleStats(css, './lib/default.json');
-
-  var parsing = [
-    '  Parsing'.cyan,
-    '| Parsing'.cyan,
-    '\\ Parsing'.cyan,
-    '- Parsing'.cyan
-  ];
 
   var ui = new inquirer.ui.BottomBar();
 

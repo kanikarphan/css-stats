@@ -1,7 +1,7 @@
 {
   "name": "css-stats",
   "description": "Use StyleStats or CSSCSS to parse a CSS file and give stats on it",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "stats.js",
   "author": {
     "name": "Kanikar Phan",
