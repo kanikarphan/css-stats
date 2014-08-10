@@ -2,7 +2,7 @@
   "name": "css-stats",
   "description": "Use StyleStats or CSSCSS to parse a CSS file and give stats on it",
   "version": "0.0.1",
-  "main": "app.js",
+  "main": "stats.js",
   "author": {
     "name": "Kanikar Phan",
     "url": "https://github.com/kanikarphan"
@@ -12,11 +12,13 @@
     "url": "https://github.com/kanikarphan/css-stats"
   },
   "dependencies": {
-    "grunt": "latest",
-    "commander": "latest",
-    "colors": "latest",
-    "inquirer": "latest",
-    "progress": "latest",
-    "grunt-csscss": "latest"
+    "grunt": "^0.4.5",
+    "commander": "^2.3.0",
+    "colors": "^0.6.2",
+    "inquirer": "^0.6.0",
+    "progress": "^1.1.8",
+    "grunt-csscss": "^0.6.2",
+    "cmdify": "0.0.4",
+    "stylestats": "^4.1.2"
   }
 }
