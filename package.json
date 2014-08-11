@@ -1,8 +1,7 @@
 {
   "name": "css-stats",
   "description": "Use StyleStats or CSSCSS to parse a CSS file and give stats on it",
-  "version": "0.0.3",
-  "main": "stats.js",
+  "version": "0.0.4",
   "author": {
     "name": "Kanikar Phan",
     "url": "https://github.com/kanikarphan"
@@ -18,21 +17,19 @@
     "node": ">=0.4.0"
   },
   "dependencies": {
-    "grunt": "^0.4.5",
     "commander": "^2.3.0",
     "colors": "^0.6.2",
     "inquirer": "^0.6.0",
     "progress": "^1.1.8",
-    "grunt-csscss": "^0.6.2",
     "cmdify": "0.0.4",
     "stylestats": "^4.1.2"
   },
-  "readme": "# Stats\n\nStats utilize [Stylestats](https://github.com/t32k/stylestats) and [CSSCSS](https://github.com/zmoazeni/csscss) to parse a css file and gives you stats on it.\n\n## Getting Started\n\nStats needs the following installed: Grunt CLI `~0.4.0` and Ruby (`v1.9.x` and up).\n\nIf you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to Grunt CLI.\n\nTo check Ruby is installed on your machine use `ruby -v`. \n[RubyInstaller](http://rubyinstaller.org/) is a Windows-based installer, the easiest way to get Ruby on Windows.\n\nUsage\n```\nUsage: stats [--stylestats|--csscss] [css]\n\nCommands:\n\nsetup [type]\n   run setup command to install parser\n\nOptions:\n\n-h, --help              output usage information\n-V, --version           output the version number\n-s, --stylestats [css]  parse css for overall stats\n-c, --csscss [css]      parse css for rulesets that have duplicated declarations\n-t, --type [parser]     parser to install [stylestats|csscss]\n```",
+  "readme": "# CSS Stats\n\nCSS Stats utilize [Stylestats](https://github.com/t32k/stylestats) and [CSSCSS](https://github.com/zmoazeni/csscss) to parse a css file and gives you stats on it.\n\n## Getting Started\n\nCSS Stats require Ruby (`v1.9.x` and up) installed. OSX should have Ruby preinstalled. For Windows you can use [RubyInstaller](http://rubyinstaller.org/). This is a Windows-based installer, the easiest way to get Ruby on Windows. To check if Ruby is installed on your machine use `ruby -v`. \n\nUsage\n```\nUsage: stats [--stylestats|--csscss] [css]\n\nCommands:\n\nsetup\n   install the necessary css parser engines\n\nstart\n   generate css-stats scaffolding to parse css\n\nOptions:\n\n-h, --help              output usage information\n-V, --version           output the version number\n-s, --stylestats [css]  parse css for overall stats\n-c, --csscss [css]      parse css for rulesets that have duplicated declarations\n```",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/kanikarphan/css-stats/issues"
   },
   "homepage": "https://github.com/kanikarphan/css-stats",
-  "_id": "css-stats@0.0.1",
+  "_id": "css-stats@0.0.3",
   "_from": "css-stats@"
 }
