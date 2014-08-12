@@ -12,6 +12,15 @@ npm install -g css-stats
 
 CSS Stats require Ruby (`v1.9.x` and up) installed. OSX should have Ruby preinstalled. For Windows you can use [RubyInstaller](http://rubyinstaller.org/). This is a Windows-based installer, the easiest way to get Ruby on Windows. To check if Ruby is installed on your machine use `ruby -v`. 
 
+## Getting Started
+In your working directory run the following command
+
+```
+css-stats setup && css-stats start
+```
+
+`css-stats setup` is to install the required css parser. `css-stats start` is to generate the scaffolding needed for css-sats.
+
 ## Usage
 
 ```
