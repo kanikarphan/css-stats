@@ -29,7 +29,7 @@ cssStats.stylestats = function(css, path) {
     console.log();
   } else {
 
-    var stats = new StyleStats(css, './lib/default.json');
+    var stats = new StyleStats(css, './option.json');
 
     var ui = new inquirer.ui.BottomBar();
 
@@ -47,7 +47,7 @@ cssStats.stylestats = function(css, path) {
           process.exit();
         } else {
 
-          var cmd = spawn(cmdify('stylestats'), [ css, '-c', './lib/default.json' ], { stdio: 'pipe' });
+          var cmd = spawn(cmdify('stylestats'), [ css, '-c', './option.json' ], { stdio: 'pipe' });
 
           cmd.stdout.pipe(ui.log);
 
@@ -128,10 +128,13 @@ cssStats.setup = function() {
 };
 
 cssStats.start = function() {
-  var src = __dirname + '/Gruntfile.js',
-      dist = process.cwd() + '/Gruntfile.js';
+  var gruntSrc = __dirname + '/Gruntfile.js',
+      gruntDist = process.cwd() + '/Gruntfile.js',
+      optionSrc = __dirname + '/option.json',
+      optionDist = process.cwd() + '/option.json';
 
-  fs.createReadStream(src).pipe(fs.createWriteStream(dist));
+  fs.createReadStream(gruntSrc).pipe(fs.createWriteStream(gruntDist));
+  fs.createReadStream(optionSrc).pipe(fs.createWriteStream(optionDist));
 
   console.log('Generating css-stats scaffolding...'.cyan);
 
