@@ -8,13 +8,24 @@ module.exports = function(grunt) {
           outputJson: true
         },
         files: {
-          './output/csscss.json': grunt.option('target')
+          './tmp/csscss.json': grunt.option('css')
         }
       }
+    },
+    copy: {
+      output: {
+        src: './tmp/csscss.json',
+        dest: grunt.option('path') + '/csscss.json'
+      }
+    },
+    clean: {
+      temp: ['./tmp']
     }
   });
 
   grunt.loadNpmTasks('grunt-csscss');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.registerTask('duplicate', ['csscss']);
+  grunt.registerTask('duplicate', ['csscss', 'copy', 'clean']);
 };

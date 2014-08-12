@@ -23,62 +23,93 @@ var parsing = [
 
 cssStats.stylestats = function(css, path) {
 
-  var stats = new StyleStats(css, './lib/default.json');
+  if (path === undefined) {
+    console.log();
+    console.log("  error: option '-o, --output [path]' argument missing".red);
+    console.log();
+  } else {
 
-  var ui = new inquirer.ui.BottomBar();
+    var stats = new StyleStats(css, './lib/default.json');
 
-  var target = '--target=' + css;
+    var ui = new inquirer.ui.BottomBar();
 
-  var cmd = spawn(cmdify('stylestats'), [ css, '-c', './lib/default.json' ], { stdio: 'pipe' });
+    var dist = path.replace(/\\/g, '/');
 
-  cmd.stdout.pipe(ui.log);
+    var output =  dist + '/stylestats.json';
 
-  cmd.on('close', function() {
-    ui.updateBottomBar('');
-    process.exit();
-  });
+    stats.parse(function (error, result) {
+      var data = JSON.stringify(result, null, 2);
 
-  stats.parse(function (error, result) {
-    var data = JSON.stringify(result, null, 2);
-    fs.writeFile('./output/stylestats.json', data, function(err) {
-      if(err) {
-        console.log(err.red);
-      }
-    }); 
-  });
+      fs.readdir(path, function (err, files) {
+
+        if (files === undefined) {
+          console.log("  error: verify directory exists".red);
+          process.exit();
+        } else {
+
+          var cmd = spawn(cmdify('stylestats'), [ css, '-c', './lib/default.json' ], { stdio: 'pipe' });
+
+          cmd.stdout.pipe(ui.log);
+
+          cmd.on('close', function() {
+            ui.updateBottomBar('');
+            process.exit();
+          });
+
+          fs.writeFile(output, data, function(err) {
+            if (err) {
+              console.log("  error: output json was not saved".red);
+            }
+          });
+        }
+      });
+
+    });
+
+  }
 };
 
 cssStats.csscss = function(css, path) {
-  var confirm = [{
-    type: 'confirm',
-    name: 'confirm',
-    message: 'This may take a while depending on your CSS file size, would you like to continue?'.yellow,
-    default: false
-  }];
 
-  inquirer.prompt( confirm, function(answer) {
-    if (answer.confirm === true) {
-      var i = 4;
+  if (path === undefined) {
+    console.log();
+    console.log("  error: option '-o, --output [path]' argument missing".red);
+    console.log();
+  } else {
 
-      var ui = new inquirer.ui.BottomBar({ bottomBar: parsing[i % 4] });
+    var confirm = [{
+      type: 'confirm',
+      name: 'confirm',
+      message: 'This may take a while depending on your CSS file size, would you like to continue?'.yellow,
+      default: false
+    }];
 
-      var timer = setInterval(function() {
-        ui.updateBottomBar(parsing[i++ % 4]);
-      }, 300 );
+    inquirer.prompt( confirm, function(answer) {
+      if (answer.confirm === true) {
+        var i = 4;
 
-      var target = '--target=' + css;
+        var ui = new inquirer.ui.BottomBar({ bottomBar: parsing[i % 4] });
 
-      var cmd = spawn(cmdify('grunt'), [ 'duplicate', target ], { stdio: 'pipe' });
+        var timer = setInterval(function() {
+          ui.updateBottomBar(parsing[i++ % 4]);
+        }, 300 );
 
-      cmd.stdout.pipe(ui.log);
+        var source = '--css=' + css;
+        var output = '--path=' + path;
 
-      cmd.on('close', function() {
-        clearInterval(timer);
-        ui.updateBottomBar('');
-        process.exit();
-      });
-    }
-  });
+        var cmd = spawn(cmdify('grunt'), [ 'duplicate', source,  output], { stdio: 'pipe' });
+
+        cmd.stdout.pipe(ui.log);
+
+        cmd.on('close', function() {
+          clearInterval(timer);
+          ui.updateBottomBar('');
+          process.exit();
+        });
+      }
+    });
+
+  }
 };
 
 cssStats.setup = function() {
@@ -104,43 +135,31 @@ cssStats.start = function() {
 
   console.log('Generating css-stats scaffolding...'.cyan);
 
-  cssStats.gruntcli();
+  cssStats.globalNpm();
 };
 
-cssStats.gruntcli = function() {
+cssStats.globalNpm = function() {
   var ui = new inquirer.ui.BottomBar();
 
-  var cmd = spawn(cmdify('npm'), ['install', '-g', 'grunt-cli' ], { stdio: 'pipe' });
+  var cmd = spawn(cmdify('npm'), ['install', '-g', 'stylestats', 'grunt-cli' ], { stdio: 'pipe' });
 
   cmd.stdout.pipe(ui.log);
 
   cmd.on('close', function() {
     ui.updateBottomBar('');
-    cssStats.grunt();
+    cssStats.localNpm();
   });
 };
 
-cssStats.grunt = function() {
+cssStats.localNpm = function() {
   var ui = new inquirer.ui.BottomBar();
 
-  var cmd = spawn(cmdify('npm'), ['install', 'grunt' ], { stdio: 'pipe' });
+  var cmd = spawn(cmdify('npm'), ['install', 'grunt', 'grunt-csscss', 'grunt-contrib-copy', 'grunt-contrib-clean'], { stdio: 'pipe' });
 
   cmd.stdout.pipe(ui.log);
 
   cmd.on('close', function() {
     ui.updateBottomBar('');
-    cssStats.gruntcsscss();
-  });
-};
-
-cssStats.gruntcsscss = function() {
-  var ui = new inquirer.ui.BottomBar();
-
-  var cmd = spawn(cmdify('npm'), ['install', 'grunt-csscss' ], { stdio: 'pipe' });
-
-  cmd.stdout.pipe(ui.log);
-
-  cmd.on('close', function() {
     ui.updateBottomBar('Ready to start!'.green);
     process.exit();
   });
@@ -151,6 +170,7 @@ program
   .usage('[--stylestats|--csscss] [css]')
   .option('-s, --stylestats [css]', 'parse css for overall stats')
   .option('-c, --csscss [css]', 'parse css for rulesets that have duplicated declarations')
+  .option('-o, --output [path]', 'output path for parse css stats')
 
 program
   .command('setup')
