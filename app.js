@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 var fs = require('fs')
-	, util = require('util')
+  , util = require('util')
   , http = require('http')
-	, path = require('path')
-	, program = require('commander')
+  , path = require('path')
+  , program = require('commander')
   , colors = require('colors')
   , inquirer = require('inquirer')
   , ProgressBar = require('progress')
@@ -123,33 +123,64 @@ cssStats.csscss = function(css, path) {
               ui.updateBottomBar(parsing[i++ % 4]);
             }, 300 );
 
+            var source = css.replace(/\\/g, '/');
+
             var dist = path.replace(/\\/g, '/');
 
             var output =  dist + '/csscss.json';
 
-            var commands = 'csscss ' + css + ' -j -v -n 5';
+            if (process.platform === 'win32') {
+              var csscss = spawn('csscss.bat', [source, '--json', '-v', '-n', '5'], { stdio: 'pipe' });
 
-            var cmd = childProcess(cmdify(commands), function (err, stdout, stderr) {
-              if (err) {
-               console.log(  err.stack.red);
-               console.log();
-              }
+              csscss.stdout.pipe(ui.log);
 
-              fs.writeFile(output, stdout, function(err) {
-                if (err) {
-                  console.log("  error: output json was not saved".red);
-                  console.log();
-                } else {
-                  process.exit();
-                }
+              var stdout = '';
+
+              csscss.stdout.on('data', function (data) {
+                var cssData = stdout += data;
+
+                fs.writeFile(output, cssData, function(err) {
+                  if (err) {
+                    console.log("  error: output json was not saved".red);
+                    console.log();
+                  } else {
+                    process.exit();
+                  }
+                });
               });
 
-            });
+              csscss.on('close', function (code) {
+                var msg = '  csscss finished parsing ' + css;
+                ui.updateBottomBar(msg.green);
+              });
 
-            cmd.on('exit', function (code) {
-              var msg = '  csscss finished parsing ' + css;
-              ui.updateBottomBar(msg.green);
-            });
+            } else {
+
+              var commands = 'csscss ' + css + ' -j -v -n 5';
+
+              var cmd = childProcess(cmdify(commands), function (err, stdout, stderr) {
+                if (err) {
+                 console.log(  err.stack.red);
+                 console.log();
+                }
+
+                fs.writeFile(output, stdout, function(err) {
+                  if (err) {
+                    console.log("  error: output json was not saved".red);
+                    console.log();
+                  } else {
+                    process.exit();
+                  }
+                });
+
+              });
+
+              cmd.on('exit', function (code) {
+                var msg = '  csscss finished parsing ' + css;
+                ui.updateBottomBar(msg.green);
+              });
+
+            }
 
           }
         });
