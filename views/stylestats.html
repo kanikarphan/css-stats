@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  <h1 class="content__title">Stylestats</h1>
+
+  <div class="selector stylestats">
+    <div class="selector__item">
+      <h6 class"selector_title">Size</h6>
+      <p>{{ stats.size | bytes }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Data URI Size</h6>
+      <p>{{ stats.dataUriSize | bytes }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Rules</h6>
+      <p>{{ stats.rules }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Selectors</h6>
+      <p>{{ stats.selectors }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Simplicity</h6>
+      <p>{{ stats.simplicity | percent }}%</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Most Identifier</h6>
+      <p>{{ stats.mostIdentifier }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Most Identifier Selector</h6>
+      <p>{{ stats.mostIdentifierSelector }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">ID Selectors</h6>
+      <p>{{ stats.idSelectors }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Universal Selectors</h6>
+      <p>{{ stats.universalSelectors }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Unqualified Attribute Selectors</h6>
+      <p>{{ stats.unqualifiedAttributeSelectors }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Important Keywords</h6>
+      <p>{{ stats.importantKeywords }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Media Queries</h6>
+      <p>{{ stats.mediaQueries }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Total Unique Colors</h6>
+      <p>{{ stats.totalUniqueColors }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Unique Color</h6>
+      {% for color in stats.uniqueColor %}
+        <p><i class="selector_color" style="background: {{ color }}"></i> {{ color }}</p>
+      {% endfor %}
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Total Unique Font Sizes</h6>
+      <p>{{ stats.totalUniqueFontSizes }}</p>
+    </div>
+
+    <div class="selector__item">
+      <h6 class"selector_title">Unique Font Size</h6>
+      <p>{{ stats.uniqueFontSize | join('<br>') | safe }}</p>
+    </div>
+
+  </div>
+
+
+{% endblock %}

@@ -1,7 +1,7 @@
 {
   "name": "css-stats",
   "description": "CSS Stats uses StyleStats or CSSCSS to parse a CSS file and give stats on it",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": {
     "name": "Kanikar Phan",
     "url": "https://github.com/kanikarphan"
@@ -17,19 +17,21 @@
     "node": ">=0.4.0"
   },
   "dependencies": {
-    "commander": "^2.3.0",
-    "colors": "^0.6.2",
-    "inquirer": "^0.6.0",
-    "progress": "^1.1.8",
     "cmdify": "0.0.4",
-    "stylestats": "^4.1.2"
+    "colors": "^0.6.2",
+    "commander": "^2.3.0",
+    "express": "^4.8.3",
+    "inquirer": "^0.6.0",
+    "open": "0.0.5",
+    "progress": "^1.1.8",
+    "stylestats": "^4.1.2",
+    "swig": "^1.4.2"
   },
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/kanikarphan/css-stats/issues"
   },
   "homepage": "https://github.com/kanikarphan/css-stats",
-  "_id": "css-stats@0.0.6",
+  "_id": "css-stats@0.0.7",
   "_from": "css-stats@",
-  "readme": "# CSS Stats\n\nCSS Stats utilize [Stylestats](https://github.com/t32k/stylestats) and [CSSCSS](https://github.com/zmoazeni/csscss) to parse a css file and gives you stats on it.\n\n## Installing\n\n```\nnpm install -g css-stats\n```\n\n## Requirement\n\nCSS Stats require Ruby (`v1.9.x` and up) installed. OSX should have Ruby preinstalled. For Windows you can use [RubyInstaller](http://rubyinstaller.org/). This is a Windows-based installer, the easiest way to get Ruby on Windows. To check if Ruby is installed on your machine use `ruby -v`. \n\n## Usage\n\n```\nUsage: css-stats [--stylestats|--csscss] [css]\n\nCommands:\n\nsetup \n   install the necessary css parser engines\n\nstart\n   generate css-stats scaffolding to parse css\n\nOptions:\n\n-h, --help              output usage information\n-V, --version           output the version number\n-s, --stylestats [css]  parse css for overall stats\n-c, --csscss [css]      parse css for rulesets that have duplicated declarations\n-o, --output [path]     output path for parse css stats\n```"
 }

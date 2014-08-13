@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  
+  <h1 class="content__title">CSSCSS</h1>
+
+  <div class="selector">
+    {% for stat in stats %}
+      <div class="selector__item">
+        <h6 class"selector_title">{{ stat.selectors }} <span class="selector_count">({{ stat.count }})</span></h6>
+        <p>{{ stat.declarations | join('<br>') | safe }}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}
