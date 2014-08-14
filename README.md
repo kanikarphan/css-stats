@@ -14,6 +14,14 @@ CSS Stats require Ruby (`v1.9.x` and up) installed. OSX should have Ruby preinst
 
 ## Getting Started
 
+For Windows start command prompt with Ruby and run the following command:
+
+```
+gem install csscss && css-stats setup
+```
+
+For OSX run the following command:
+
 ```
 css-stats setup
 ```

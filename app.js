@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 var fs = require('fs')
-  , util = require('util')
+	, util = require('util')
   , http = require('http')
-  , path = require('path')
-  , program = require('commander')
+	, path = require('path')
+	, program = require('commander')
   , colors = require('colors')
   , inquirer = require('inquirer')
   , ProgressBar = require('progress')
@@ -190,19 +190,43 @@ cssStats.csscss = function(css, path) {
 };
 
 cssStats.setup = function() {
-  console.log('  installing css-stats parser...'.cyan + '\nenter your computer password if prompted'.underline);
-  console.log();
 
-  var ui = new inquirer.ui.BottomBar();
+  if (process.platform === 'win32') {
 
-  var cmd = spawn(cmdify('sudo'), ['gem', 'install', 'csscss' ], { stdio: 'pipe' });
+    var installed = [{
+      type: 'installed',
+      name: 'installed',
+      message: 'did you already install csscss? refer to the readme file'.yellow,
+      default: false
+    }];
 
-  cmd.stdout.pipe(ui.log);
+    inquirer.prompt( installed, function(answer) {
+      if (answer.installed === true) {
+        var ui = new inquirer.ui.BottomBar({ bottomBar: '  installing css-stats parser...'.cyan });
 
-  cmd.on('close', function() {
-    ui.updateBottomBar('');
-    cssStats.globalNpm();
-  });
+        var cmd = spawn(cmdify('sudo'), ['gem', 'install', 'csscss' ], { stdio: 'pipe' });
+
+        cmd.stdout.pipe(ui.log);
+
+        cmd.on('close', function() {
+          ui.updateBottomBar('');
+          cssStats.globalNpm();
+        });
+      }
+    });
+    
+  } else {
+    var ui = new inquirer.ui.BottomBar({ bottomBar: '  installing css-stats parser...'.cyan + '\nenter your computer password if prompted'.underline });
+
+    var cmd = spawn(cmdify('sudo'), ['gem', 'install', 'csscss' ], { stdio: 'pipe' });
+
+    cmd.stdout.pipe(ui.log);
+
+    cmd.on('close', function() {
+      ui.updateBottomBar('');
+      cssStats.globalNpm();
+    });
+  }
 };
 
 cssStats.globalNpm = function() {

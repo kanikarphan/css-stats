@@ -33,5 +33,9 @@
   },
   "homepage": "https://github.com/kanikarphan/css-stats",
   "_id": "css-stats@0.0.9",
-  "_from": "css-stats@"
+  "_from": "css-stats@",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "readme": "# CSS Stats\n\nCSS Stats utilize [Stylestats](https://github.com/t32k/stylestats) and [CSSCSS](https://github.com/zmoazeni/csscss) to parse a css file and gives you stats on it.\n\n## Installing\n\n```\nnpm install -g css-stats\n```\n\n## Requirement\n\nCSS Stats require Ruby (`v1.9.x` and up) installed. OSX should have Ruby preinstalled. For Windows you can use [RubyInstaller](http://rubyinstaller.org/). This is a Windows-based installer, the easiest way to get Ruby on Windows. To check if Ruby is installed on your machine use `ruby -v`. \n\n## Getting Started\n\n```\ncss-stats setup\n```\n\n## Usage\n\n```\nUsage: css-stats [--stylestats|--csscss] [css]\n\nCommands:\n\nsetup\n   install the necessary css parser engines\n\nview [--json] [--port]\n   visual view for css stats\n\n\nOptions:\n\n    -h, --help              output usage information\n    -V, --version           output the version number\n    -s, --stylestats [css]  parse css for overall stats\n    -c, --csscss [css]      parse css for rulesets that have duplicated declarations\n    -o, --output [path]     output path for parse css stats\n    -j, --json [json]       stylestats or csscss json\n    -p, --port [number]     port number for webpage\n```"
 }
