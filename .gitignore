@@ -23,4 +23,4 @@ node_modules
 public/.codekit-cache
 public/config.codekit
 public/js/main.js
-public/sass/
+public/sass

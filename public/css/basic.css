@@ -2342,7 +2342,7 @@ thead {
   display: inherit; }
 
 .loader {
-  top: 50%; }
+  bottom: 30%; }
 
 .header .loader__inner {
   display: block;

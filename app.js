@@ -194,7 +194,7 @@ cssStats.setup = function() {
   if (process.platform === 'win32') {
 
     var installed = [{
-      type: 'installed',
+      type: 'confirm',
       name: 'installed',
       message: 'did you already install csscss? refer to the readme file'.yellow,
       default: false
@@ -204,14 +204,7 @@ cssStats.setup = function() {
       if (answer.installed === true) {
         var ui = new inquirer.ui.BottomBar({ bottomBar: '  installing css-stats parser...'.cyan });
 
-        var cmd = spawn(cmdify('sudo'), ['gem', 'install', 'csscss' ], { stdio: 'pipe' });
-
-        cmd.stdout.pipe(ui.log);
-
-        cmd.on('close', function() {
-          ui.updateBottomBar('');
-          cssStats.globalNpm();
-        });
+        cssStats.globalNpm();
       }
     });
     
