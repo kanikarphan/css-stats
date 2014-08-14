@@ -132,8 +132,6 @@ cssStats.csscss = function(css, path) {
             if (process.platform === 'win32') {
               var csscss = spawn('csscss.bat', [source, '--json', '-v', '-n', '5'], { stdio: 'pipe' });
 
-              csscss.stdout.pipe(ui.log);
-
               var stdout = '';
 
               csscss.stdout.on('data', function (data) {
