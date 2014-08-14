@@ -137,7 +137,7 @@ if ( typeof define === 'function' && define.amd ) {
 	var support = { animations : Modernizr.cssanimations },
 		container = document.getElementsByTagName( 'main' )[0],
 		header = container.querySelector( '.header' ),
-		loader = new PathLoader( document.getElementById( 'loader-circle' ) ),
+		loader = new PathLoader( document.getElementById( 'loader__circle' ) ),
 		animEndEventNames = { 'WebkitAnimation' : 'webkitAnimationEnd', 'OAnimation' : 'oAnimationEnd', 'msAnimation' : 'MSAnimationEnd', 'animation' : 'animationend' },
 		// animation end event name
 		animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
