@@ -216,7 +216,7 @@ cssStats.setup = function() {
     });
     
   } else {
-    var ui = new inquirer.ui.BottomBar({ bottomBar: '  installing css-stats parser...'.cyan + '\nenter your computer password if prompted'.underline });
+    var ui = new inquirer.ui.BottomBar({ bottomBar: '  installing css-stats parser...'.cyan + '\nenter your computer password if prompted\n'.underline });
 
     var cmd = spawn(cmdify('sudo'), ['gem', 'install', 'csscss' ], { stdio: 'pipe' });
 

@@ -2342,7 +2342,7 @@ thead {
   display: inherit; }
 
 .loader {
-  top: 50%; }
+  bottom: 35%; }
 
 .header .ip-inner {
   display: block;
@@ -2363,10 +2363,10 @@ thead {
   fill: none;
   stroke-width: 6; }
 
-.header .loader svg path.loader-circlebg {
+.header .loader svg path.loader__circlebg {
   stroke: #ddd; }
 
-.header .loader svg path.loader-circle {
+.header .loader svg path.loader__circle {
   -webkit-transition: stroke-dashoffset 0.2s;
   transition: stroke-dashoffset 0.2s;
   stroke: #1c9ccd; }
