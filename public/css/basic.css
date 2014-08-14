@@ -2332,19 +2332,19 @@ thead {
 .loaded .header {
   visibility: hidden; }
 
-.layout-switch .header__title {
+.layout__switch .header__title {
   display: inline; }
-.layout-switch .header__title,
-.layout-switch .icon--glass {
+.layout__switch .header__title,
+.layout__switch .icon--glass {
   color: #74badd; }
 
 .header__title {
   display: inherit; }
 
 .loader {
-  bottom: 35%; }
+  top: 50%; }
 
-.header .ip-inner {
+.header .loader__inner {
   display: block;
   margin: 0 auto; }
 
@@ -2474,7 +2474,7 @@ thead {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 1);
     transform: scale3d(0.3, 0.3, 1); } }
-.layout-switch .header {
+.layout__switch .header {
   position: absolute; }
 
 .no-js .header {

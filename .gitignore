@@ -22,5 +22,5 @@ Temporary Items
 node_modules
 public/.codekit-cache
 public/config.codekit
-js/main.js
-sass/
+public/js/main.js
+public/sass/
