@@ -132,6 +132,8 @@ cssStats.csscss = function(css, path) {
             if (process.platform === 'win32') {
               var csscss = spawn('csscss.bat', [source, '--json', '-v', '-n', '5'], { stdio: 'pipe' });
 
+              csscss.stdout.pipe(ui.log);
+
               var stdout = '';
 
               csscss.stdout.on('data', function (data) {
@@ -202,7 +204,14 @@ cssStats.setup = function() {
       if (answer.installed === true) {
         var ui = new inquirer.ui.BottomBar({ bottomBar: '  installing css-stats parser...'.cyan });
 
-        cssStats.globalNpm();
+        var cmd = spawn(cmdify('sudo'), ['gem', 'install', 'csscss' ], { stdio: 'pipe' });
+
+        cmd.stdout.pipe(ui.log);
+
+        cmd.on('close', function() {
+          ui.updateBottomBar('');
+          cssStats.globalNpm();
+        });
       }
     });
     
@@ -314,6 +323,101 @@ cssStats.viewCsscss = function(file, port, data) {
   open(webpage);
 };
 
+cssStats.prompts = function() {
+
+  var promptFile,
+      promptSave;
+
+  var choose = [{
+    type: 'list',
+    name: 'ui',
+    message: 'what do you want to do?'.yellow,
+    choices: [
+      'parse css for overall stats',
+      'parse css for rulesets that have duplicated declarations',
+      'visual view parse css stats'
+    ]
+  }];
+
+  var file = [{
+    type: 'input',
+    name: 'file',
+    message: 'where is your css file?'.yellow
+  }];
+
+  var save = [{
+    type: 'input',
+    name: 'save',
+    message: 'where do you want to save the output?'.yellow
+  }];
+
+  inquirer.prompt( choose, function(answer) {
+    switch (answer.ui) {
+      case 'parse css for overall stats':
+
+        inquirer.prompt( file, function(answer) {
+
+          promptFile = answer.file;
+
+          inquirer.prompt( save, function(answer) {
+            
+            promptSave = answer.save;
+
+            cssStats.stylestats(promptFile, promptSave);
+          });
+        });
+
+        break;
+      case 'parse css for rulesets that have duplicated declarations':
+        
+        inquirer.prompt( file, function(answer) {
+
+          promptFile = answer.file;
+
+          inquirer.prompt( save, function(answer) {
+            
+            promptSave = answer.save;
+
+            cssStats.csscss(promptFile, promptSave);
+          });
+        });
+
+        break;
+      case 'visual view parse css stats':
+
+        var outputJson,
+            serverPort;
+
+        var json = [{
+          type: 'input',
+          name: 'json',
+          message: 'where is your stylestats.json or csscss.json file?'.yellow
+        }];
+
+        var port = [{
+          type: 'input',
+          name: 'port',
+          message: 'what port number do for the webpage?'.yellow
+        }];
+        
+        inquirer.prompt( json, function(answer) {
+
+          outputJson = answer.json;
+
+          inquirer.prompt( port, function(answer) {
+            
+            serverPort = answer.port;
+
+            cssStats.view(outputJson, serverPort);
+          });
+        });
+
+        break;
+    }
+  });
+
+};
+
 program
   .version('0.0.1')
   .usage('[--stylestats|--csscss] [css]')
@@ -335,6 +439,13 @@ program
   .description('visual view for css stats')
   .action(function() {
     cssStats.view(program.json, program.port);
+  });
+
+program
+  .command('prompt')
+  .description('css-stats prompt user interface')
+  .action(function() {
+    cssStats.prompts();
   });
 
 program.parse(process.argv);
