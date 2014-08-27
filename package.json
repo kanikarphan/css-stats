@@ -1,7 +1,7 @@
 {
   "name": "css-stats",
   "description": "CSS Stats uses StyleStats or CSSCSS to parse a CSS file and give stats on it",
-  "version": "0.1.6",
+  "version": "0.1.4",
   "author": {
     "name": "Kanikar Phan",
     "url": "https://github.com/kanikarphan"
@@ -32,7 +32,7 @@
     "url": "https://github.com/kanikarphan/css-stats/issues"
   },
   "homepage": "https://github.com/kanikarphan/css-stats",
-  "_id": "css-stats@0.1.6",
+  "_id": "css-stats@0.1.4",
   "_from": "css-stats@",
   "scripts": {
     "start": "node server.js"
