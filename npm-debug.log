@@ -21,24 +21,24 @@
 7 verbose parsed url   href: '.' }
 8 silly lockFile 3a52ce78- .
 9 verbose lock . /Users/kphan/.npm/3a52ce78-.lock
-10 verbose tar pack [ '/var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/tmp.tgz',
+10 verbose tar pack [ '/var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/tmp.tgz',
 10 verbose tar pack   '.' ]
-11 verbose tarball /var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/tmp.tgz
+11 verbose tarball /var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/tmp.tgz
 12 verbose folder .
-13 info prepublish css-stats@0.1.5
+13 info prepublish css-stats@0.1.6
 14 silly lockFile 1f1177db-tar tar://.
 15 verbose lock tar://. /Users/kphan/.npm/1f1177db-tar.lock
-16 silly lockFile 71299500-00538-0-5629249720368534-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/tmp.tgz
-17 verbose lock tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/tmp.tgz /Users/kphan/.npm/71299500-00538-0-5629249720368534-tmp-tgz.lock
+16 silly lockFile df601b90-562285-0-921845618635416-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/tmp.tgz
+17 verbose lock tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/tmp.tgz /Users/kphan/.npm/df601b90-562285-0-921845618635416-tmp-tgz.lock
 18 silly lockFile 1f1177db-tar tar://.
 19 silly lockFile 1f1177db-tar tar://.
-20 silly lockFile 71299500-00538-0-5629249720368534-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/tmp.tgz
-21 silly lockFile 71299500-00538-0-5629249720368534-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/tmp.tgz
-22 verbose tar unpack /var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/tmp.tgz
-23 silly lockFile 99bff02a-00538-0-5629249720368534-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/package
-24 verbose lock tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/package /Users/kphan/.npm/99bff02a-00538-0-5629249720368534-package.lock
-25 silly lockFile 71299500-00538-0-5629249720368534-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/tmp.tgz
-26 verbose lock tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/tmp.tgz /Users/kphan/.npm/71299500-00538-0-5629249720368534-tmp-tgz.lock
+20 silly lockFile df601b90-562285-0-921845618635416-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/tmp.tgz
+21 silly lockFile df601b90-562285-0-921845618635416-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/tmp.tgz
+22 verbose tar unpack /var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/tmp.tgz
+23 silly lockFile 68e67775-562285-0-921845618635416-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/package
+24 verbose lock tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/package /Users/kphan/.npm/68e67775-562285-0-921845618635416-package.lock
+25 silly lockFile df601b90-562285-0-921845618635416-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/tmp.tgz
+26 verbose lock tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/tmp.tgz /Users/kphan/.npm/df601b90-562285-0-921845618635416-tmp-tgz.lock
 27 silly gunzTarPerm modes [ '755', '644' ]
 28 silly gunzTarPerm extractEntry package.json
 29 silly gunzTarPerm extractEntry .npmignore
@@ -66,31 +66,31 @@
 51 silly gunzTarPerm extractEntry views/csscss.html
 52 silly gunzTarPerm extractEntry views/layout.html
 53 silly gunzTarPerm extractEntry views/stylestats.html
-54 silly lockFile 99bff02a-00538-0-5629249720368534-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/package
-55 silly lockFile 99bff02a-00538-0-5629249720368534-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/package
-56 silly lockFile 71299500-00538-0-5629249720368534-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/tmp.tgz
-57 silly lockFile 71299500-00538-0-5629249720368534-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/tmp.tgz
-58 verbose tar pack [ '/Users/kphan/.npm/css-stats/0.1.5/package.tgz',
-58 verbose tar pack   '/var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/package' ]
-59 verbose tarball /Users/kphan/.npm/css-stats/0.1.5/package.tgz
-60 verbose folder /var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/package
-61 silly lockFile 99bff02a-00538-0-5629249720368534-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/package
-62 verbose lock tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/package /Users/kphan/.npm/99bff02a-00538-0-5629249720368534-package.lock
-63 silly lockFile 7feb5a72--npm-css-stats-0-1-5-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.5/package.tgz
-64 verbose lock tar:///Users/kphan/.npm/css-stats/0.1.5/package.tgz /Users/kphan/.npm/7feb5a72--npm-css-stats-0-1-5-package-tgz.lock
-65 silly lockFile 99bff02a-00538-0-5629249720368534-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/package
-66 silly lockFile 99bff02a-00538-0-5629249720368534-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20695-6zTjfG0Q/1409153500538-0.5629249720368534/package
-67 silly lockFile 7feb5a72--npm-css-stats-0-1-5-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.5/package.tgz
-68 silly lockFile 7feb5a72--npm-css-stats-0-1-5-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.5/package.tgz
-69 silly lockFile eb950234-phan-npm-css-stats-0-1-5-package /Users/kphan/.npm/css-stats/0.1.5/package
-70 verbose lock /Users/kphan/.npm/css-stats/0.1.5/package /Users/kphan/.npm/eb950234-phan-npm-css-stats-0-1-5-package.lock
-71 silly lockFile eb950234-phan-npm-css-stats-0-1-5-package /Users/kphan/.npm/css-stats/0.1.5/package
-72 silly lockFile eb950234-phan-npm-css-stats-0-1-5-package /Users/kphan/.npm/css-stats/0.1.5/package
-73 verbose tar unpack /Users/kphan/.npm/css-stats/0.1.5/package.tgz
-74 silly lockFile 6a487c63-phan-npm-css-stats-0-1-5-package tar:///Users/kphan/.npm/css-stats/0.1.5/package
-75 verbose lock tar:///Users/kphan/.npm/css-stats/0.1.5/package /Users/kphan/.npm/6a487c63-phan-npm-css-stats-0-1-5-package.lock
-76 silly lockFile 7feb5a72--npm-css-stats-0-1-5-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.5/package.tgz
-77 verbose lock tar:///Users/kphan/.npm/css-stats/0.1.5/package.tgz /Users/kphan/.npm/7feb5a72--npm-css-stats-0-1-5-package-tgz.lock
+54 silly lockFile 68e67775-562285-0-921845618635416-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/package
+55 silly lockFile 68e67775-562285-0-921845618635416-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/package
+56 silly lockFile df601b90-562285-0-921845618635416-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/tmp.tgz
+57 silly lockFile df601b90-562285-0-921845618635416-tmp-tgz tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/tmp.tgz
+58 verbose tar pack [ '/Users/kphan/.npm/css-stats/0.1.6/package.tgz',
+58 verbose tar pack   '/var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/package' ]
+59 verbose tarball /Users/kphan/.npm/css-stats/0.1.6/package.tgz
+60 verbose folder /var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/package
+61 silly lockFile 68e67775-562285-0-921845618635416-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/package
+62 verbose lock tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/package /Users/kphan/.npm/68e67775-562285-0-921845618635416-package.lock
+63 silly lockFile 190e13ee--npm-css-stats-0-1-6-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.6/package.tgz
+64 verbose lock tar:///Users/kphan/.npm/css-stats/0.1.6/package.tgz /Users/kphan/.npm/190e13ee--npm-css-stats-0-1-6-package-tgz.lock
+65 silly lockFile 68e67775-562285-0-921845618635416-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/package
+66 silly lockFile 68e67775-562285-0-921845618635416-package tar:///var/folders/vt/c5nrql0d7s5gyvkvn2b8rw3jg9hpq2/T/npm-20739-wpVz2wCC/1409153562285-0.921845618635416/package
+67 silly lockFile 190e13ee--npm-css-stats-0-1-6-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.6/package.tgz
+68 silly lockFile 190e13ee--npm-css-stats-0-1-6-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.6/package.tgz
+69 silly lockFile bf158a63-phan-npm-css-stats-0-1-6-package /Users/kphan/.npm/css-stats/0.1.6/package
+70 verbose lock /Users/kphan/.npm/css-stats/0.1.6/package /Users/kphan/.npm/bf158a63-phan-npm-css-stats-0-1-6-package.lock
+71 silly lockFile bf158a63-phan-npm-css-stats-0-1-6-package /Users/kphan/.npm/css-stats/0.1.6/package
+72 silly lockFile bf158a63-phan-npm-css-stats-0-1-6-package /Users/kphan/.npm/css-stats/0.1.6/package
+73 verbose tar unpack /Users/kphan/.npm/css-stats/0.1.6/package.tgz
+74 silly lockFile 6b2528f9-phan-npm-css-stats-0-1-6-package tar:///Users/kphan/.npm/css-stats/0.1.6/package
+75 verbose lock tar:///Users/kphan/.npm/css-stats/0.1.6/package /Users/kphan/.npm/6b2528f9-phan-npm-css-stats-0-1-6-package.lock
+76 silly lockFile 190e13ee--npm-css-stats-0-1-6-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.6/package.tgz
+77 verbose lock tar:///Users/kphan/.npm/css-stats/0.1.6/package.tgz /Users/kphan/.npm/190e13ee--npm-css-stats-0-1-6-package-tgz.lock
 78 silly gunzTarPerm modes [ '755', '644' ]
 79 silly gunzTarPerm extractEntry package.json
 80 silly gunzTarPerm extractEntry .npmignore
@@ -118,17 +118,17 @@
 102 silly gunzTarPerm extractEntry views/csscss.html
 103 silly gunzTarPerm extractEntry views/layout.html
 104 silly gunzTarPerm extractEntry views/stylestats.html
-105 silly lockFile 6a487c63-phan-npm-css-stats-0-1-5-package tar:///Users/kphan/.npm/css-stats/0.1.5/package
-106 silly lockFile 6a487c63-phan-npm-css-stats-0-1-5-package tar:///Users/kphan/.npm/css-stats/0.1.5/package
-107 silly lockFile 7feb5a72--npm-css-stats-0-1-5-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.5/package.tgz
-108 silly lockFile 7feb5a72--npm-css-stats-0-1-5-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.5/package.tgz
-109 verbose chmod /Users/kphan/.npm/css-stats/0.1.5/package.tgz 644
-110 verbose chown /Users/kphan/.npm/css-stats/0.1.5/package.tgz [ 1587043042, 473586879 ]
+105 silly lockFile 6b2528f9-phan-npm-css-stats-0-1-6-package tar:///Users/kphan/.npm/css-stats/0.1.6/package
+106 silly lockFile 6b2528f9-phan-npm-css-stats-0-1-6-package tar:///Users/kphan/.npm/css-stats/0.1.6/package
+107 silly lockFile 190e13ee--npm-css-stats-0-1-6-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.6/package.tgz
+108 silly lockFile 190e13ee--npm-css-stats-0-1-6-package-tgz tar:///Users/kphan/.npm/css-stats/0.1.6/package.tgz
+109 verbose chmod /Users/kphan/.npm/css-stats/0.1.6/package.tgz 644
+110 verbose chown /Users/kphan/.npm/css-stats/0.1.6/package.tgz [ 1587043042, 473586879 ]
 111 silly lockFile 3a52ce78- .
 112 silly lockFile 3a52ce78- .
 113 silly publish { name: 'css-stats',
 113 silly publish   description: 'CSS Stats uses StyleStats or CSSCSS to parse a CSS file and give stats on it',
-113 silly publish   version: '0.1.5',
+113 silly publish   version: '0.1.6',
 113 silly publish   author: { name: 'Kanikar Phan', url: 'https://github.com/kanikarphan' },
 113 silly publish   repository: { type: 'git', url: 'https://github.com/kanikarphan/css-stats' },
 113 silly publish   bin: { 'css-stats': 'app.js' },
@@ -146,21 +146,21 @@
 113 silly publish   readmeFilename: 'README.md',
 113 silly publish   bugs: { url: 'https://github.com/kanikarphan/css-stats/issues' },
 113 silly publish   homepage: 'https://github.com/kanikarphan/css-stats',
-113 silly publish   _id: 'css-stats@0.1.5',
+113 silly publish   _id: 'css-stats@0.1.6',
 113 silly publish   _from: '.',
 113 silly publish   scripts: { start: 'node server.js' },
 113 silly publish   readme: '# CSS Stats\n\nCSS Stats utilize [Stylestats](https://github.com/t32k/stylestats) and [CSSCSS](https://github.com/zmoazeni/csscss) to parse a css file and gives you stats on it.\n\n## Installing\n\n```\nnpm install -g css-stats\n```\n\n## Requirement\n\nCSS Stats require Ruby (`v1.9.x` and up) installed. OSX should have Ruby preinstalled. For Windows you can use [RubyInstaller](http://rubyinstaller.org/). This is a Windows-based installer, the easiest way to get Ruby on Windows. To check if Ruby is installed on your machine use `ruby -v`. \n\n## Getting Started\n\n```\ncss-stats setup\n```\n\n## Usage\n\n```\nUsage: css-stats [--stylestats|--csscss] [css]\n\nCommands:\n\nsetup\n   install the necessary css parser engines\n\nview [--json] [--port]\n   visual view for css stats\n\n\nOptions:\n\n    -h, --help              output usage information\n    -V, --version           output the version number\n    -s, --stylestats [css]  parse css for overall stats\n    -c, --csscss [css]      parse css for rulesets that have duplicated declarations\n    -o, --output [path]     output path for parse css stats\n    -j, --json [json]       stylestats or csscss json\n    -p, --port [number]     port number for webpage\n```',
-113 silly publish   dist: { shasum: '82bd44f2c40bd2740728ef7299eddb7ace62deb7' } }
+113 silly publish   dist: { shasum: '93b032c7c46422afc46ce4b59433968a79902646' } }
 114 verbose url raw css-stats
 115 verbose url resolving [ 'https://registry.npmjs.org/', './css-stats' ]
 116 verbose url resolved https://registry.npmjs.org/css-stats
-117 info trying registry request attempt 1 at 08:31:41
+117 info trying registry request attempt 1 at 08:32:42
 118 http PUT https://registry.npmjs.org/css-stats
 119 http 403 https://registry.npmjs.org/css-stats
 120 error publish Failed PUT 403
-121 error Error: forbidden cannot modify pre-existing version: 0.1.5
-121 error old={"name":"css-stats","description":"CSS Stats uses StyleStats or CSSCSS to parse a CSS file and give stats on it","version":"0.1.5","author":{"name":"Kanikar Phan","url":"https://github.com/kanikarphan"},"repository":{"type":"git","url":"https://github.com/kanikarphan/css-stats"},"bin":{"css-stats":"app.js"},"engine":{"node":">=0.4.0"},"dependencies":{"cmdify":"0.0.4","colors":"^0.6.2","commander":"^2.3.0","express":"^4.8.3","inquirer":"^0.6.0","open":"0.0.5","progress":"^1.1.8","stylestats":"^4.1.2","swig":"^1.4.2"},"bugs":{"url":"https://github.com/kanikarphan/css-stats/issues"},"homepage":"https://github.com/kanikarphan/css-stats","_id":"css-stats@0.1.5","_from":".","scripts":{"start":"node server.js"},"dist":{"shasum":"83014918f067abdd1bca70307e82f94d60592305","tarball":"http://registry.npmjs.org/css-stats/-/css-stats-0.1.5.tgz"},"_npmVersion":"1.4.3","_npmUser":{"name":"kanikarphan","email":"kanikarphan@gmail.com"},"maintainers":[{"name":"kanikarphan","email":"kanikarphan@gmail.com"}]}
-121 error new={"name":"css-stats","description":"CSS Stats uses StyleStats or CSSCSS to parse a CSS file and give stats on it","version":"0.1.5","author":{"name":"Kanikar Phan","url":"https://github.com/kanikarphan"},"repository":{"type":"git","url":"https://github.com/kanikarphan/css-stats"},"bin":{"css-stats":"app.js"},"engine":{"node":">=0.4.0"},"dependencies":{"cmdify":"0.0.4","colors":"^0.6.2","commander":"^2.3.0","express":"^4.8.3","inquirer":"^0.6.0","open":"0.0.5","progress":"^1.1.8","stylestats":"^4.1.2","swig":"^1.4.2"},"readmeFilename":"README.md","bugs":{"url":"https://github.com/kanikarphan/css-stats/issues"},"homepage":"https://github.com/kanikarphan/css-stats","_id":"css-stats@0.1.5","_from":".","scripts":{"start":"node server.js"},"readme":"# CSS Stats\u000a\u000aCSS Stats utilize [Stylestats](https://github.com/t32k/stylestats) and [CSSCSS](https://github.com/zmoazeni/csscss) to parse a css file and gives you stats on it.\u000a\u000a## Installing\u000a\u000a```\u000anpm install -g css-stats\u000a```\u000a\u000a## Requirement\u000a\u000aCSS Stats require Ruby (`v1.9.x` and up) installed. OSX should have Ruby preinstalled. For Windows you can use [RubyInstaller](http://rubyinstaller.org/). This is a Windows-based installer, the easiest way to get Ruby on Windows. To check if Ruby is installed on your machine use `ruby -v`. \u000a\u000a## Getting Started\u000a\u000a```\u000acss-stats setup\u000a```\u000a\u000a## Usage\u000a\u000a```\u000aUsage: css-stats [--stylestats|--csscss] [css]\u000a\u000aCommands:\u000a\u000asetup\u000a   install the necessary css parser engines\u000a\u000aview [--json] [--port]\u000a   visual view for css stats\u000a\u000a\u000aOptions:\u000a\u000a    -h, --help              output usage information\u000a    -V, --version           output the version number\u000a    -s, --stylestats [css]  parse css for overall stats\u000a    -c, --csscss [css]      parse css for rulesets that have duplicated declarations\u000a    -o, --output [path]     output path for parse css stats\u000a    -j, --json [json]       stylestats or csscss json\u000a    -p, --port [number]     port number for webpage\u000a```","dist":{"shasum":"82bd44f2c40bd2740728ef7299eddb7ace62deb7","tarball":"http://registry.npmjs.org/css-stats/-/css-stats-0.1.5.tgz"},"_npmVersion":"1.4.3","_npmUser":{"name":"kanikarphan","email":"kanikarphan@gmail.com"},"maintainers":[{"name":"kanikarphan","email":"kanikarphan@gmail.com"}]}: css-stats
+121 error Error: forbidden cannot modify pre-existing version: 0.1.6
+121 error old={"name":"css-stats","description":"CSS Stats uses StyleStats or CSSCSS to parse a CSS file and give stats on it","version":"0.1.6","author":{"name":"Kanikar Phan","url":"https://github.com/kanikarphan"},"repository":{"type":"git","url":"https://github.com/kanikarphan/css-stats"},"bin":{"css-stats":"app.js"},"engine":{"node":">=0.4.0"},"dependencies":{"cmdify":"0.0.4","colors":"^0.6.2","commander":"^2.3.0","express":"^4.8.3","inquirer":"^0.6.0","open":"0.0.5","progress":"^1.1.8","stylestats":"^4.1.2","swig":"^1.4.2"},"bugs":{"url":"https://github.com/kanikarphan/css-stats/issues"},"homepage":"https://github.com/kanikarphan/css-stats","_id":"css-stats@0.1.6","_from":".","scripts":{"start":"node server.js"},"dist":{"shasum":"a9da50c485887b6e41e6d2544be9b499dc1bcbe3","tarball":"http://registry.npmjs.org/css-stats/-/css-stats-0.1.6.tgz"},"_npmVersion":"1.4.3","_npmUser":{"name":"kanikarphan","email":"kanikarphan@gmail.com"},"maintainers":[{"name":"kanikarphan","email":"kanikarphan@gmail.com"}]}
+121 error new={"name":"css-stats","description":"CSS Stats uses StyleStats or CSSCSS to parse a CSS file and give stats on it","version":"0.1.6","author":{"name":"Kanikar Phan","url":"https://github.com/kanikarphan"},"repository":{"type":"git","url":"https://github.com/kanikarphan/css-stats"},"bin":{"css-stats":"app.js"},"engine":{"node":">=0.4.0"},"dependencies":{"cmdify":"0.0.4","colors":"^0.6.2","commander":"^2.3.0","express":"^4.8.3","inquirer":"^0.6.0","open":"0.0.5","progress":"^1.1.8","stylestats":"^4.1.2","swig":"^1.4.2"},"readmeFilename":"README.md","bugs":{"url":"https://github.com/kanikarphan/css-stats/issues"},"homepage":"https://github.com/kanikarphan/css-stats","_id":"css-stats@0.1.6","_from":".","scripts":{"start":"node server.js"},"readme":"# CSS Stats\u000a\u000aCSS Stats utilize [Stylestats](https://github.com/t32k/stylestats) and [CSSCSS](https://github.com/zmoazeni/csscss) to parse a css file and gives you stats on it.\u000a\u000a## Installing\u000a\u000a```\u000anpm install -g css-stats\u000a```\u000a\u000a## Requirement\u000a\u000aCSS Stats require Ruby (`v1.9.x` and up) installed. OSX should have Ruby preinstalled. For Windows you can use [RubyInstaller](http://rubyinstaller.org/). This is a Windows-based installer, the easiest way to get Ruby on Windows. To check if Ruby is installed on your machine use `ruby -v`. \u000a\u000a## Getting Started\u000a\u000a```\u000acss-stats setup\u000a```\u000a\u000a## Usage\u000a\u000a```\u000aUsage: css-stats [--stylestats|--csscss] [css]\u000a\u000aCommands:\u000a\u000asetup\u000a   install the necessary css parser engines\u000a\u000aview [--json] [--port]\u000a   visual view for css stats\u000a\u000a\u000aOptions:\u000a\u000a    -h, --help              output usage information\u000a    -V, --version           output the version number\u000a    -s, --stylestats [css]  parse css for overall stats\u000a    -c, --csscss [css]      parse css for rulesets that have duplicated declarations\u000a    -o, --output [path]     output path for parse css stats\u000a    -j, --json [json]       stylestats or csscss json\u000a    -p, --port [number]     port number for webpage\u000a```","dist":{"shasum":"93b032c7c46422afc46ce4b59433968a79902646","tarball":"http://registry.npmjs.org/css-stats/-/css-stats-0.1.6.tgz"},"_npmVersion":"1.4.3","_npmUser":{"name":"kanikarphan","email":"kanikarphan@gmail.com"},"maintainers":[{"name":"kanikarphan","email":"kanikarphan@gmail.com"}]}: css-stats
 121 error     at RegClient.<anonymous> (/usr/local/Cellar/node/0.10.26/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:237:14)
 121 error     at Request.self.callback (/usr/local/Cellar/node/0.10.26/lib/node_modules/npm/node_modules/request/request.js:123:22)
 121 error     at Request.EventEmitter.emit (events.js:98:17)
