@@ -33,11 +33,14 @@ Usage: css-stats [--stylestats|--csscss] [css]
 
 Commands:
 
-setup
-   install the necessary css parser engines
+setup 
+    install the necessary css parser engines
 
 view [--json] [--port]
-   visual view for css stats
+    visual view for css stats
+
+prompt 
+    css-stats prompt user interface
 
 
 Options:
